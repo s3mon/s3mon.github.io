@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>s3mon</title>
+    <link>https://s3mon.dev/</link>
+    <description>Recent content on s3mon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Oct 2019 21:23:28 +0200</lastBuildDate>
+    
+	<atom:link href="https://s3mon.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>s3mon</title>
+      <link>https://s3mon.dev/about/</link>
+      <pubDate>Thu, 03 Oct 2019 21:23:28 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/about/</guid>
+      <description>If you are you making backups and storing them in an s3 bucket it could happen that you are blindly trusting your backup mechanism but your s3 buckets may be empty or with corrupted backups. 😲
+The &amp;ldquo;backup&amp;rdquo; topic is huge, but these days, in many cases, it all ends in an s3 bucket.
+s3mon aims to be a command-line tool that could help verify that data has been stored in an s3 bucket no longer than a defined period of time in order to ensure that backups have been stored properly and if not, notify by defined alerts and channels in order to fix or improve the backup procedure.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://s3mon.dev/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://s3mon.dev/readme/</guid>
+      <description>public www public content</description>
+    </item>
+    
+  </channel>
+</rss>
