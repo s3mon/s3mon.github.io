@@ -6,10 +6,21 @@
     <description>Recent content on s3mon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2019 21:23:28 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 23:13:07 +0200</lastBuildDate>
     
 	<atom:link href="https://s3mon.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How It Works</title>
+      <link>https://s3mon.dev/post/how-it-works/</link>
+      <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/post/how-it-works/</guid>
+      <description> In a nutshell s3mon will list and search for files of a certain pattern on a list of defifned buckets that are not older than a defined period. These options are defined in a config.yml file (YAML formated)
+The config file (prototype) Example of a config file:
+--- s3mon: endpoint: s3.provider access_key: ACCESS_KEY_ID secret_key: SECRET_ACCESS_KEY buckets: bucket_A: - file: starts_with_foo age: 86400 size: 30720 bucket_B: - file: file age: 43200 size: 1024 - file: exact_file_name age: 43200  </description>
+    </item>
     
     <item>
       <title>s3mon</title>

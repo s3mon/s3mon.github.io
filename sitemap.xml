@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://s3mon.dev/tags/how/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://s3mon.dev/post/how-it-works/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://s3mon.dev/post/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://s3mon.dev/</loc>
-    <lastmod>2019-10-03T21:23:28+02:00</lastmod>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://s3mon.dev/tags/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
   </url>
   
   <url>
@@ -15,10 +35,6 @@
   <url>
     <loc>https://s3mon.dev/readme/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://s3mon.dev/tags/</loc>
   </url>
   
 </urlset>
