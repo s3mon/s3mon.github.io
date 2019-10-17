@@ -17,9 +17,20 @@
       <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
       
       <guid>https://s3mon.dev/post/how-it-works/</guid>
-      <description> In a nutshell s3mon will list and search for files of a certain pattern on a list of defifned buckets that are not older than a defined period. These options are defined in a config.yml file (YAML formated)
-The config file (prototype) Example of a config file:
---- s3mon: endpoint: s3.provider access_key: ACCESS_KEY_ID secret_key: SECRET_ACCESS_KEY buckets: bucket_A: - prefix: starts_with_foo age: 86400 size: 30720 bucket_B: - prefix: file age: 43200 size: 1024 - prefix: exact_file_name age: 43200  </description>
+      <description>In a nutshell s3mon will list and search for files of a certain pattern on a list of defined buckets that are not older than a defined period. These options are defined in a config.yml file (YAML formated)
+The config file Example of a configuration file:
+--- s3mon: endpoint: s3.provider region: &amp;lt;aws-region&amp;gt; access_key: ACCESS_KEY_ID secret_key: SECRET_ACCESS_KEY buckets: bucket_A: - prefix: starts_with_foo age: 86400 size: 30720 bucket_B: - prefix: file age: 43200 size: 1024 - prefix: exact_file_name age: 43200  If your S3 provider is AWS you can omit the endpoint and only specify a region, for example:</description>
+    </item>
+    
+    <item>
+      <title>Metrics</title>
+      <link>https://s3mon.dev/post/metrics/</link>
+      <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/post/metrics/</guid>
+      <description>InfluxDB line protocol The output of s3mon is the InfluxDB line protocol, for example:
+$ s3mon -c config.yml s3mon,bucket=backup,prefix=backup error=0i,exist=1i,size_mismatch=1i s3mon,bucket=random,prefix=abc error=0i,exist=1i,size_mismatch=0i s3mon,bucket=foo,prefix=bar error=0i,exist=1i,size_mismatch=0i s3mon,bucket=test,prefix=backup error=0i,exist=0i,size_mismatch=0i s3mon,bucket=images,prefix=img error=0i,exist=1i,size_mismatch=0i  telegraf s3mon could be called periodically from telegraf using this configuration:
+[[inputs.exec]] command = &amp;quot;/path/to/s3mon -c /path/to/config.yml&amp;quot; interval = &amp;quot;1h&amp;quot; data_format = &amp;quot;influx&amp;quot;  grafana You could use this dashboard and configure custom alerts: https://grafana.com/grafana/dashboards/11008</description>
     </item>
     
     <item>

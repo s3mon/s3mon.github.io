@@ -8,7 +8,7 @@
 		<meta name="description" content="monitor s3 buckets for missing files">
 		<meta name="keywords" content="s3, backup, files, history, buckets, missing">
 		<meta name="generator" content="Hugo 0.58.3" />
-		<title>s3mon &middot; s3mon</title>
+		<title>Metrics &middot; s3mon</title>
         <link rel="shortcut icon" href="https://s3mon.dev/images/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://s3mon.dev/images/apple-touch-icon-57x57.png" />
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://s3mon.dev/images/apple-touch-icon-114x114.png" />
@@ -53,6 +53,10 @@
 	
 
 	
+		<a href="https://github.com/s3mon/s3mon/">Github</a>
+		<a href="https://github.com/s3mon/s3mon/issues">Issues</a>
+		<a href='https://s3mon.dev/about'>About</a>
+	
 
 	
 	<a class="cta" href="https://s3mon.dev/index.xml">Subscribe</a>
@@ -62,34 +66,62 @@
         <section id="wrapper">
             <article class="post">
                 <header>
-                    <h1>s3mon</h1>
+                    <h1>Metrics</h1>
                     <h2 class="headline">
                     <br>
+                    
+                    
+                        
+                            <a href="https://s3mon.dev/tags/metrics">metrics</a>
+                        
+                            <a href="https://s3mon.dev/tags/grafana">grafana</a>
+                        
+                            <a href="https://s3mon.dev/tags/telegraf">telegraf</a>
+                        
+                    
                     
                     </h2>
                 </header>
                 <section id="post-body">
-                    <p>If you are you making backups and storing them in an s3 bucket it could happen
-that you are blindly trusting your backup mechanism but your s3 buckets may be
-empty or with corrupted backups. 😲</p>
+                    
 
-<p>The &ldquo;backup&rdquo; topic is huge, but these days, in many cases, it all ends in an s3
-bucket.</p>
+<h1 id="influxdb-line-protocol">InfluxDB line protocol</h1>
 
-<p><strong>s3mon</strong> aims to be a command-line tool that could help verify that data has
-been stored in an s3 bucket no longer than a defined period of time in order
-to ensure that backups have been stored properly and if not, notify by defined
-alerts and channels in order to fix or improve the backup procedure. 🤔</p>
+<p>The output of <strong>s3mon</strong> is the <a href="https://docs.influxdata.com/influxdb/v1.7/write_protocols/line_protocol_tutorial/">InfluxDB line protocol</a>, for example:</p>
+
+<pre><code>$ s3mon -c config.yml
+s3mon,bucket=backup,prefix=backup error=0i,exist=1i,size_mismatch=1i
+s3mon,bucket=random,prefix=abc error=0i,exist=1i,size_mismatch=0i
+s3mon,bucket=foo,prefix=bar error=0i,exist=1i,size_mismatch=0i
+s3mon,bucket=test,prefix=backup error=0i,exist=0i,size_mismatch=0i
+s3mon,bucket=images,prefix=img error=0i,exist=1i,size_mismatch=0i
+</code></pre>
+
+<h1 id="telegraf">telegraf</h1>
+
+<p><strong>s3mon</strong> could be called periodically from telegraf using this configuration:</p>
+
+<pre><code>[[inputs.exec]]
+  command = &quot;/path/to/s3mon -c /path/to/config.yml&quot;
+  interval = &quot;1h&quot;
+  data_format = &quot;influx&quot;
+</code></pre>
+
+<h1 id="grafana">grafana</h1>
+
+<p>You could use this dashboard and configure custom alerts: <a href="https://grafana.com/grafana/dashboards/11008">https://grafana.com/grafana/dashboards/11008</a></p>
+
+<p><img src="/img/grafana.png" alt="grafana" /></p>
 
                 </section>
             </article>
             <footer id="post-meta" class="clearfix">
-                <a  href="https://github.com/s3mon/public/edit/master/about.md" target="_blank">Suggest edit     ✍</a>
+                <a  href="https://github.com/s3mon/public/edit/master/post/metrics.md" target="_blank">Suggest edit     ✍</a>
 
                 
                     
                 <section id="sharing">
-                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fs3mon.dev%2fabout%2f - s3mon "><span class="icon-twitter"> Tweet</span></a>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fs3mon.dev%2fpost%2fmetrics%2f - Metrics "><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(

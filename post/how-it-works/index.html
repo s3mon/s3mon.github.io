@@ -83,16 +83,19 @@
 
 <h1 id="in-a-nutshell">In a nutshell</h1>
 
-<p><strong>s3mon</strong> will list and search for files of a certain pattern on a list of
-defifned buckets that are not older than a defined period. These options are defined in a <code>config.yml</code> file (<a href="https://en.wikipedia.org/wiki/YAML">YAML formated</a>)</p>
+<p><strong>s3mon</strong> will list and search for files of a certain pattern
+on a list of defined buckets that are not older than a defined
+period. These options are defined in a <code>config.yml</code> file
+(<a href="https://en.wikipedia.org/wiki/YAML">YAML formated</a>)</p>
 
-<h1 id="the-config-file-prototype">The config file (prototype)</h1>
+<h1 id="the-config-file">The config file</h1>
 
-<p>Example of a config file:</p>
+<p>Example of a configuration file:</p>
 
 <pre><code class="language-yaml">---
 s3mon:
   endpoint: s3.provider
+  region: &lt;aws-region&gt;
   access_key: ACCESS_KEY_ID
   secret_key: SECRET_ACCESS_KEY
   buckets:
@@ -106,6 +109,34 @@ s3mon:
         size: 1024
       - prefix: exact_file_name
         age: 43200
+</code></pre>
+
+<p>If your <strong>S3</strong> provider is <strong>AWS</strong> you can omit the <code>endpoint</code> and only specify
+a <code>region</code>, for example:</p>
+
+<pre><code class="language-yaml">---
+s3mon:
+  region: us-east-1
+  access_key: ACCESS_KEY_ID
+  secret_key: SECRET_ACCESS_KEY
+  buckets:
+    bucket_name:
+      - prefix: starts_with_foo
+        age: 86400
+        size: 30720
+</code></pre>
+
+<p>The <code>access_key</code> and <code>secret_key</code> can be omitted if the environment vars
+<code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> are set, example:</p>
+
+<pre><code class="language-yaml">---
+s3mon:
+  region: us-east-1
+  buckets:
+    bucket_name:
+      - prefix: starts_with_foo
+        age: 86400
+        size: 30720
 </code></pre>
 
                 </section>
@@ -156,6 +187,13 @@ s3mon:
     
         
         <li>
+            <a href="https://s3mon.dev/tags/grafana/">grafana</a>
+        </li>
+        
+   
+    
+        
+        <li>
             <a href="https://s3mon.dev/tags/how/">how</a>
         </li>
         
@@ -164,6 +202,20 @@ s3mon:
         
         <li>
             <a href="https://s3mon.dev/post/how-it-works/">How It Works</a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://s3mon.dev/post/metrics/">Metrics</a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://s3mon.dev/tags/metrics/">metrics</a>
         </li>
         
    
@@ -190,12 +242,12 @@ s3mon:
    
     
         
+        <li>
+            <a href="https://s3mon.dev/tags/telegraf/">telegraf</a>
+        </li>
+        
    
     
-        
-        <li>
-            <a href="https://s3mon.dev/readme/"></a>
-        </li>
         
    
 </ul>

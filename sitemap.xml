@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://s3mon.dev/tags/grafana/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://s3mon.dev/tags/how/</loc>
     <lastmod>2019-10-03T23:13:07+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://s3mon.dev/post/how-it-works/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://s3mon.dev/post/metrics/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://s3mon.dev/tags/metrics/</loc>
     <lastmod>2019-10-03T23:13:07+02:00</lastmod>
   </url>
   
@@ -24,6 +39,11 @@
   
   <url>
     <loc>https://s3mon.dev/tags/</loc>
+    <lastmod>2019-10-03T23:13:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://s3mon.dev/tags/telegraf/</loc>
     <lastmod>2019-10-03T23:13:07+02:00</lastmod>
   </url>
   

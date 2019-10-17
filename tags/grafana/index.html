@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
@@ -8,7 +8,7 @@
 		<meta name="description" content="monitor s3 buckets for missing files">
 		<meta name="keywords" content="s3, backup, files, history, buckets, missing">
 		<meta name="generator" content="Hugo 0.58.3" />
-		<title>s3mon &middot; s3mon</title>
+		<title>grafana &middot; s3mon</title>
         <link rel="shortcut icon" href="https://s3mon.dev/images/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://s3mon.dev/images/apple-touch-icon-57x57.png" />
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://s3mon.dev/images/apple-touch-icon-114x114.png" />
@@ -45,155 +45,50 @@
         <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Droid+Sans:400,700%7CRoboto:400,700,900' type='text/css'>
 	</head>
 
-    <body>
-       <nav class="main-nav">
+	<body>
+	<nav class="main-nav">
 	
 	
 		<a href='https://s3mon.dev/'> <span class="arrow">←</span>Home</a>
 	
 
 	
+		<a href="https://github.com/s3mon/s3mon/">Github</a>
+		<a href="https://github.com/s3mon/s3mon/issues">Issues</a>
+		<a href='https://s3mon.dev/about'>About</a>
+	
 
 	
 	<a class="cta" href="https://s3mon.dev/index.xml">Subscribe</a>
 	
 </nav>
+	<div class="profile">
+    <section id="wrapper">
+        <header id="header">
+            <a href="https://s3mon.dev/about"><img id="avatar" class="2x" src="https://s3mon.dev/img/s3mon.png"></a>
+            <h1>s3mon</h1>
+            <h2>monitor s3 buckets for missing files</h2>
+        </header>
+        <a href="https://crates.io/crates/s3mon"><img src="https://img.shields.io/crates/v/s3mon.svg" alt="s3mon" class="badge"></a>
+        <a href="https://travis-ci.org/s3mon/s3mon"><img src="https://travis-ci.org/s3mon/s3mon.svg?branch=master" alt="s3mon" class="badge"></a>
+    </section>
+</div>
 
-        <section id="wrapper">
-            <article class="post">
-                <header>
-                    <h1>s3mon</h1>
-                    <h2 class="headline">
-                    <br>
-                    
-                    </h2>
-                </header>
-                <section id="post-body">
-                    <p>If you are you making backups and storing them in an s3 bucket it could happen
-that you are blindly trusting your backup mechanism but your s3 buckets may be
-empty or with corrupted backups. 😲</p>
-
-<p>The &ldquo;backup&rdquo; topic is huge, but these days, in many cases, it all ends in an s3
-bucket.</p>
-
-<p><strong>s3mon</strong> aims to be a command-line tool that could help verify that data has
-been stored in an s3 bucket no longer than a defined period of time in order
-to ensure that backups have been stored properly and if not, notify by defined
-alerts and channels in order to fix or improve the backup procedure. 🤔</p>
-
-                </section>
-            </article>
-            <footer id="post-meta" class="clearfix">
-                <a  href="https://github.com/s3mon/public/edit/master/about.md" target="_blank">Suggest edit     ✍</a>
-
-                
-                    
-                <section id="sharing">
-                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fs3mon.dev%2fabout%2f - s3mon "><span class="icon-twitter"> Tweet</span></a>
-
-<a class="facebook" href="#" onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;"><span class="icon-facebook-rect"> Share</span>
-</a>
-
-                </section>
-            </footer>
-
-            <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "s3mon" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-            <ul id="post-list" class="archive readmore">
-    <h3>Read more</h3>
+	<section id="wrapper" class="home">
+		<ul id="post-list">
     
     
         
-        <li>
-            <a href="https://s3mon.dev/tags/grafana/">grafana</a>
-        </li>
+            <li>
+                <a href='https://s3mon.dev/post/metrics/'>Metrics <h2>grafana, telegraf</h2></a>
+            </li>
         
-   
     
-        
-        <li>
-            <a href="https://s3mon.dev/tags/how/">how</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/post/how-it-works/">How It Works</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/post/metrics/">Metrics</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/tags/metrics/">metrics</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/post/">Posts</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/">s3mon</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/tags/">Tags</a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="https://s3mon.dev/tags/telegraf/">telegraf</a>
-        </li>
-        
-   
-    
-        
-   
 </ul>
-            <footer id="footer">
+        <nav id="post-nav">
+    
+</nav>
+		<footer id="footer">
     
         <div id="social">
 
@@ -216,9 +111,9 @@ alerts and channels in order to fix or improve the backup procedure. 🤔</p>
     </p>
 </footer>
 
-        </section>
+	</section>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://s3mon.dev/js/main.js"></script>
 <script src="https://s3mon.dev/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -240,5 +135,5 @@ if (!doNotTrack) {
 </script>
 
 
-    </body>
+	</body>
 </html>

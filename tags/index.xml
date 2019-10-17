@@ -12,11 +12,38 @@
     
     
     <item>
+      <title>grafana</title>
+      <link>https://s3mon.dev/tags/grafana/</link>
+      <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>how</title>
       <link>https://s3mon.dev/tags/how/</link>
       <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
       
       <guid>https://s3mon.dev/tags/how/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metrics</title>
+      <link>https://s3mon.dev/tags/metrics/</link>
+      <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/tags/metrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>telegraf</title>
+      <link>https://s3mon.dev/tags/telegraf/</link>
+      <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/tags/telegraf/</guid>
       <description></description>
     </item>
     

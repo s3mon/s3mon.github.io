@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on s3mon</title>
-    <link>https://s3mon.dev/post/</link>
-    <description>Recent content in Posts on s3mon</description>
+    <title>metrics on s3mon</title>
+    <link>https://s3mon.dev/tags/metrics/</link>
+    <description>Recent content in metrics on s3mon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Oct 2019 23:13:07 +0200</lastBuildDate>
     
-	<atom:link href="https://s3mon.dev/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://s3mon.dev/tags/metrics/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>How It Works</title>
-      <link>https://s3mon.dev/post/how-it-works/</link>
-      <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
-      
-      <guid>https://s3mon.dev/post/how-it-works/</guid>
-      <description>In a nutshell s3mon will list and search for files of a certain pattern on a list of defined buckets that are not older than a defined period. These options are defined in a config.yml file (YAML formated)
-The config file Example of a configuration file:
---- s3mon: endpoint: s3.provider region: &amp;lt;aws-region&amp;gt; access_key: ACCESS_KEY_ID secret_key: SECRET_ACCESS_KEY buckets: bucket_A: - prefix: starts_with_foo age: 86400 size: 30720 bucket_B: - prefix: file age: 43200 size: 1024 - prefix: exact_file_name age: 43200  If your S3 provider is AWS you can omit the endpoint and only specify a region, for example:</description>
-    </item>
     
     <item>
       <title>Metrics</title>
