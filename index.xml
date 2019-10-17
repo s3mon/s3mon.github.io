@@ -17,9 +17,9 @@
       <pubDate>Thu, 03 Oct 2019 23:13:07 +0200</pubDate>
       
       <guid>https://s3mon.dev/post/how-it-works/</guid>
-      <description>In a nutshell s3mon will list and search for files starting with prefix on a list of defined buckets that are not older than a specified age. These options are defined in a config.yml file, (YAML formated)
+      <description>In a nutshell s3mon will list and search for files starting with a prefix on a list of defined buckets that are not older than a specified age. These options are defined in a config.yml file, (YAML formated)
 The config file Example of a configuration file:
---- s3mon: endpoint: s3.provider region: &amp;lt;aws-region&amp;gt; access_key: ACCESS_KEY_ID secret_key: SECRET_ACCESS_KEY buckets: bucket_A: - prefix: starts_with_foo age: 86400 size: 30720 bucket_B: - prefix: file age: 43200 size: 1024 - prefix: exact_file_name age: 43200  If your S3 provider is AWS you can omit the endpoint and only specify a region, for example:</description>
+--- s3mon: endpoint: s3.provider region: &amp;lt;aws-region&amp;gt; access_key: ACCESS_KEY_ID secret_key: SECRET_ACCESS_KEY buckets: bucket_A: # bucket name - prefix: starts_with_foo # prefix file starts with age: 86400 # in seconds size: 30720 # in bytes bucket_B: - prefix: file age: 43200 - prefix: my-55GB-backup-every-2-days age: 172800 size: 53687091200  The size option is in bytes and it is optional.</description>
     </item>
     
     <item>
