@@ -47,5 +47,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title>install</title>
+      <link>https://s3mon.dev/tags/install/</link>
+      <pubDate>Wed, 02 Oct 2019 22:01:36 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/tags/install/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

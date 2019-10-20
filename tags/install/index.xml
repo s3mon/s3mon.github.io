@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>install on s3mon</title>
+    <link>https://s3mon.dev/tags/install/</link>
+    <description>Recent content in install on s3mon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Oct 2019 22:01:36 +0200</lastBuildDate>
+    
+	<atom:link href="https://s3mon.dev/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install</title>
+      <link>https://s3mon.dev/post/install/</link>
+      <pubDate>Wed, 02 Oct 2019 22:01:36 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/post/install/</guid>
+      <description>To install s3mon:
+$ cargo install s3mon   check your PATH $HOME/.cargo/bin/s3mon
+ If you don&amp;rsquo;t have cargo try:
+$ curl https://sh.rustup.rs -sSf | sh  </description>
+    </item>
+    
+  </channel>
+</rss>

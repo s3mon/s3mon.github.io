@@ -33,5 +33,17 @@ $ s3mon -c config.yml s3mon,bucket=backup,prefix=backup error=0i,exist=1i,size_m
 [[inputs.exec]] command = &amp;quot;/path/to/s3mon -c /path/to/config.yml&amp;quot; interval = &amp;quot;1h&amp;quot; data_format = &amp;quot;influx&amp;quot;  grafana You could use this dashboard and configure custom alerts: https://grafana.com/grafana/dashboards/11008</description>
     </item>
     
+    <item>
+      <title>Install</title>
+      <link>https://s3mon.dev/post/install/</link>
+      <pubDate>Wed, 02 Oct 2019 22:01:36 +0200</pubDate>
+      
+      <guid>https://s3mon.dev/post/install/</guid>
+      <description>To install s3mon:
+$ cargo install s3mon   check your PATH $HOME/.cargo/bin/s3mon
+ If you don&amp;rsquo;t have cargo try:
+$ curl https://sh.rustup.rs -sSf | sh  </description>
+    </item>
+    
   </channel>
 </rss>
