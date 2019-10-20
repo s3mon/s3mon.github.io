@@ -41,7 +41,7 @@ $ s3mon -c config.yml s3mon,bucket=backup,prefix=backup error=0i,exist=1i,size_m
       <guid>https://s3mon.dev/post/install/</guid>
       <description>To install s3mon:
 $ cargo install s3mon   check your PATH $HOME/.cargo/bin/s3mon
- If you don&amp;rsquo;t have cargo try:
+ $ ~/.cargo/bin/s3mon -h s3mon x.x.x USAGE: s3mon [OPTIONS] FLAGS: -h, --help Prints help information -V, --version Prints version information OPTIONS: -c, --config &amp;lt;FILE&amp;gt; config.yml  If you don&amp;rsquo;t have cargo try:
 $ curl https://sh.rustup.rs -sSf | sh  </description>
     </item>
     
